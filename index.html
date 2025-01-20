@@ -13,77 +13,92 @@
       crossorigin="anonymous"
     />
 
+    <!-- CSS Esterno -->
+
+    <link rel="stylesheet" href="./style.css">
 
   </head>
   <body>
-    <main>
+    <header>
       <div class="container">
-        <div>
+        <div class="row d-flex justify-content-center"><img src="./output.jpg" class="w-25" alt=""></div>
+        
+      </div>
+      
+    </header>
+    <main>
+      <div class="blocco-uno container p-5">
+        <div class="text-center mb-4">
           <h1>Calcola il prezzo del tuo biglietto</h1>
         </div>
   
         <div class="container">
           <form class="row">
             <div class="col-md col-lg">
-              <label for="text" class="row">Nome e Cognome</label>
+              <label for="text" class="row biglietto-txt h4">Nome e Cognome</label>
               <input type="text" class="row" id="name">
             </div>
   
-            <div class="col-sm col-md col-lg">
-              <label for="text" class="row">Chilometri da percorrere</label>
-              <input type="text" class="row" id="km">
+            <div class="col-sm col-md col-lg mb-5">
+              <label for="text" class="row biglietto-txt h4">Chilometri da percorrere</label>
+              <input type="text" class="row " id="km">
             </div>
          
             <div class="col-sm col-md col-lg">
-              <label for="select" class="row">Fascia d'età</label>
-              <select class="form-select row" id="age" aria-label="Default select example">
+              <label for="select" class="row biglietto-txt h4">Fascia d'età</label>
+              <select class="form-select row " id="age" aria-label="Default select example">
                 <option value="Maggiorenne">Maggiorenne</option>
                 <option value="Minorenne">Minorenne</option>
                 <option value="Over 65">Over 65</option>
               </select>
             </div>
           
-            <div class="row">
-              <button type="button" class="btn btn-primary col" id="generate">Genera</button>
-              <button type="submit" class="btn btn-primary col">Annulla</button>
+            <div class="row d-flex justify-content-around">
+              <button type="button" class="btn btn-primary btn-md col-sm-4 col-md-3 col-lg-2 fs-3" id="generate">Genera</button>
+              <button type="submit" class="btn btn-primary btn-md col-sm-4 col-md-3 col-lg-2 fs-3">Annulla</button>
   
             </div>
           </form>
         </div>
       </div>
       
-      <div class="container row">
+      <div class="blocco-due container mt-5">
 
+        <div class="text-center p-5">
+          <h1>il Tuo biglietto:</h1>
+        </div>
+  
+       <div class="biglietto row p-4">
         <div class="col-md col-lg">
-          <p> Nome e Cognome</p>
-          <div id="result-name"></div>
+          <p class="h4 biglietto-txt"> Nome Passeggero</p>
+          <div id="result-name" class="h4 biglietto-txt final"></div>
         </div>
 
         <div class="col-md col-lg">
-          <p> Km da Percorrere</p>
-          <div id="result-km"></div>
+          <p class="h4 biglietto-txt"> Offerta</p>
+          <div id="result-offer" class="h4 biglietto-txt final"></div>
 
         </div>
 
         <div class="col-md col-lg">
-          <p> Categoria età</p>
-         <div id="result-age"></div>
+          <p class="h4 biglietto-txt"> Carrozza</p>
+         <div id="result-carrozza" class="h4 biglietto-txt final"></div>
 
         </div>
 
         <div class="col-md col-lg">
-          <p> Codice CP</p>
-          <div id="result-cp"></div>
+          <p class="h4 biglietto-txt"> Codice CP</p>
+          <div id="result-cp" class="h4 biglietto-txt final"></div>
 
-       </div>
+       </div >
 
        <div class="col-sm col-md col-lg">
-        <p> Prezzo Totale</p>
-        <div id="priceTotal"></div>
+        <p class="h4 biglietto-txt"> Prezzo Totale</p>
+        <div id="priceTotal" class="h4 biglietto-txt final "></div>
 
       </div>
 
-
+       </div>
       </div>
 
     </main>

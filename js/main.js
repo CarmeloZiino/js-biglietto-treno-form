@@ -35,8 +35,8 @@ const priceKm = 0.21;
 
 
 const resultName = document.getElementById('result-name');
-const resultKm = document.getElementById('result-km');
-const resultAge = document.getElementById('result-age');
+const resultCarrozza = document.getElementById('result-carrozza');
+const resultOffer = document.getElementById("result-offer");
 const resultCp = document.getElementById('result-cp');
 const priceTotal = document.getElementById('priceTotal');
 
@@ -48,23 +48,25 @@ genera.addEventListener ('click' , function () {
 let priceBasis = parseFloat(km.value) * priceKm;
 
 let discount = 0
-    if (eta === 'Minorenne') {
+let offer = "Biglietto Standard";
+    if (eta.value === 'Minorenne') {
         discount = (priceBasis * 20) / 100;
+        offer = "Biglietto Young"
     }
-    else if (eta === 'Over 65') {
+    else if (eta.value === 'Over 65') {
         discount = (priceBasis * 40) / 100;
-    }
-    else if (eta === 'Maggiorenni'){
-    discount = 0;
+        offer = "Biglietto Boomer"
     }
 
+    const carrozza = Math.floor(Math.random() * 19) + 1;
 const randomCodiceCp = Math.random()* 10000;
+
 let priceToPay = priceBasis - parseFloat(discount);
 
 resultName.innerHTML = nomeCognome.value;
-resultKm.innerHTML = km.value;
-resultAge.innerHTML = eta.value;
-priceTotal.innerHTML = priceToPay.toFixed(2);
+resultOffer.innerHTML = offer;
+resultCarrozza.innerHTML = carrozza;
+priceTotal.innerHTML = `Euro ${priceToPay.toFixed(2)}`;
 // priceTotal = priceTotal.toFixed(2);
 resultCp.innerHTML = `CP${randomCodiceCp.toFixed()}`;
 

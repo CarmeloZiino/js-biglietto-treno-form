@@ -1,0 +1,45 @@
+*{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #500866;
+}
+
+.btn{
+    background-color: rgba(232, 195, 76, 0.6);
+    border: 2px solid #500866;
+}
+
+.btn:hover{
+    background-color: #93589E;
+
+}
+
+#name , #km {
+    color: black;
+}
+
+.biglietto{
+    background-color: #93589E;
+    border-radius: 10pt;
+    box-shadow: 7px 7px 10px rgba(255, 255, 255, 0.3);
+
+}
+
+.biglietto-txt{
+    text-shadow: 5px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blocco-uno {
+    background-color: rgb(237, 180, 0, 0.6);
+    border-radius: 10pt;
+    box-shadow: 7px 7px 10px rgba(255, 255, 255, 0.3);
+}
+
+
+.final{
+    color:  rgba(232, 195, 76);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0), -2px -2px 4px rgba(0, 0, 0), 2px -2px 4px rgba(0, 0, 0), -2px 2px 4px rgba(0, 0, 0);
+}
