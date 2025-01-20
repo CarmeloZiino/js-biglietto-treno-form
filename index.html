@@ -16,26 +16,36 @@
 
   </head>
   <body>
-    <main>
+    <main class="container">
       <div class="">
         <h1>Calcola il prezzo del tuo biglietto</h1></div>
 
-      <div class="">
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div class="container">
+        <form class="row">
+          <div class="col-md col-lg">
+            <label for="text" class="row">Nome e Cognome</label>
+            <input type="text" class="row">
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+
+          <div class="col-sm col-md col-lg">
+            <label for="text class="row"">Chilometri da percorrere</label>
+            <input type="text" class="row">
           </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+       
+          <div class="col-sm col-md col-lg">
+            <label for="select" class="row">Fascia d'età</label>
+            <select class="form-select row" aria-label="Default select example">
+              <option selected>Maggiorenne</option>
+              <option value="2">Minorenne</option>
+              <option value="3">Over 65</option>
+            </select>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+        
+          <div class="row">
+            <button type="submit" class="btn btn-primary col">Genera</button>
+            <button type="submit" class="btn btn-primary col">Annulla</button>
+
+          </div>
         </form>
       </div>
 
