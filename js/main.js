@@ -45,9 +45,9 @@ const priceTotal = document.getElementById('priceTotal');
 
 genera.addEventListener ('click' , function () {
 
-let priceBasis = km * priceKm;
+let priceBasis = parseFloat(km.value) * priceKm;
 
-let discount = ("")
+let discount = 0
     if (eta === 'Minorenne') {
         discount = (priceBasis * 20) / 100;
     }
@@ -58,7 +58,7 @@ let discount = ("")
     discount = 0;
     }
 
-const randomCodiceCp = Math.random();
+const randomCodiceCp = Math.random()* 10000;
 let priceToPay = priceBasis - parseFloat(discount);
 
 resultName.innerHTML = nomeCognome.value;
@@ -66,38 +66,8 @@ resultKm.innerHTML = km.value;
 resultAge.innerHTML = eta.value;
 priceTotal.innerHTML = priceToPay.toFixed(2);
 // priceTotal = priceTotal.toFixed(2);
-resultCp.innerHTML = randomCodiceCp.toFixed(5);
+resultCp.innerHTML = `CP${randomCodiceCp.toFixed()}`;
 
 
 });
 
-
-/*
-
- let priceToPay = totalPrice - discount;
- priceToPay = (priceToPay.toFixed(2));
- console.log ( "Il Totale da pagare è:" , priceToPay , "€") ;
-
-
-
-if (age <18) {
-    discount = (totalPrice * 20) / 100;
-    discount = (discount.toFixed(2));
-    console.log ("Hai maturato uno sconto di:" , discount , "€");
-}
-else if (age >65) {
-    discount = (totalPrice * 40) / 100;
-    discount = (discount.toFixed(2));
-    console.log ("Hai maturato uno sconto di:" , discount , "€");
-}
-else {
-   discount = 0;
-   discount = (discount.toFixed(2));
-   console.log ("Mi spiace... non hai maturato alcuno sconto.");
-}
-*/
-
-
-
-
-// 5.
